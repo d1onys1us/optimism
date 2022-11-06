@@ -815,12 +815,15 @@ workflows:
       - depcheck:
           requires:
             - yarn-monorepo
-      # - devnet:
-      #     name: devnet (with deployed contracts)
-      #     deploy: true
+      - bedrock-go-tests
+      - fuzz-op-node
+      - bedrock-markdown
       - devnet:
-          name: devnet (with genesis contracts)
-          deploy: false
+          name: devnet (with deployed contracts)
+          deploy: true
+      #- devnet:
+      #    name: devnet (with genesis contracts)
+      #    deploy: false
       - go-lint-test-build:
           name: batch-submitter-tests
           binary_name: batch-submitter
