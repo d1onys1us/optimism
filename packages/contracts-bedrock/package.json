@@ -22,7 +22,7 @@
     "build:ts": "tsc -p tsconfig.json",
     "autogen:artifacts": "ts-node scripts/generate-artifacts.ts",
     "deploy": "hardhat deploy",
-    "test": "yarn build:differential && forge test",
+    "test": "yarn build:differential && forge test:unit",
     "coverage": "yarn build:differential && forge coverage",
     "coverage:lcov": "yarn build:differential && forge coverage --report lcov",
     "gas-snapshot": "yarn build:differential && forge snapshot --no-match-test 'differential|fuzz'",
