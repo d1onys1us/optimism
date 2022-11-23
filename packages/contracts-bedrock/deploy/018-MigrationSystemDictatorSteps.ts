@@ -282,7 +282,7 @@ const deployFn: DeployFunction = async (hre) => {
         hre.deployConfig.l2OutputOracleGenesisL2Output !==
         ethers.constants.HashZero
       ) {
-        const genesisOutput = await L2OutputOracle.getL2Output(
+        const genesisOutput = await L2OutputOracle.getL2OutputAfter(
           hre.deployConfig.l2OutputOracleStartingBlockNumber
         )
         assert(
